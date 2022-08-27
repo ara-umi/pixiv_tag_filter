@@ -8,13 +8,6 @@ import scrapy
 from scrapy import signals
 
 input_url = input("""*******************************************************************************
-\t该功能需要pixiv会员，cookies请保存在cookies_vip.txt下
-\t在设定tag/搜索条件后，传入第一页的url
-\teg. https://www.pixiv.net/tags/%E9%A3%8E%E6%99%AF/artworks?order=popular_d&scd=2022-08-02&blt=1000&s_mode=s_tag
-\tscrapy将自动爬取所有满足条件的图片，默认最多爬取50页
-\t一旦图片被爬取后，将存入历史记录中，不会再次被爬取，记录位于history文件夹下
-\t爬取后的图片将存在picture下，文件夹名字为本次执行爬虫的开始时间
-*******************************************************************************
 First page url:""")
 
 test_url = "https://www.pixiv.net/tags/%E9%A3%8E%E6%99%AF/illustrations?order=popular_d&scd=2022-08-03&ecd=2022-08-27&blt=100&bgt=299"
