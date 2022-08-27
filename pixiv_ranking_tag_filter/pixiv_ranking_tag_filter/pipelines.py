@@ -16,7 +16,7 @@ class PixivRankingTagFilterPipeline(object):
 
     def process_item(self, item, spider):
         name = item.get("name")
-        name = name.replace("_p0", "")  # 如果不做多图爬取，那么命名就统一去掉p0
+        # name = name.replace("_p0", "")  # 尾缀可能是p0可能是ugoira0，很麻烦，我也不清楚
         picture = item.get("picture")
 
         assert name, "Invalid name"

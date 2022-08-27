@@ -12,3 +12,7 @@ if not os.path.exists(log_dir):
 picture_dir = "./picture"
 if not os.path.exists(picture_dir):
     os.makedirs(picture_dir)
+
+history_dir = "./history"
+if not os.path.exists(history_dir):
+    os.makedirs(history_dir)
