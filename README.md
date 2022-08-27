@@ -13,7 +13,7 @@ conda env create -n xx -f environment.yaml
 
 ## start spider
 
-```cmd
+```python
 cd {your_repository_path}\pixiv_tag_filter\pixiv_ranking_tag_filter
 scrapy crawl popular/ranking_tag...
 
