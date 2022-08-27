@@ -16,18 +16,21 @@ conda env create -n xx -f environment.yaml
 ```python
 cd {your_repository_path}\pixiv_tag_filter\pixiv_ranking_tag_filter
 scrapy crawl popular/ranking_tag...
-
-# spider mode:
-popular: 
-After you set the tag and search conditions, pass the URL of the first page into cmd, it will automatically download all the pictures that meet the conditions, and record the picture id. Duplicate pictures will not be crawled.
-This mode needs cookies with pixiv vip
-
-ranking_tag:
-Crawl all the pictures that satisfy the tag on the ranking of the day, you can change the tag in RankingTagSpider.require_tags, type list.
-
-tag_like:
-Search all pictures of a specific tag, filter and download the pictures. You can set the upper and lower limits of *bookmark* or *like* or*view*, alse you can set start and end page.
 ```
+
+## spider mode
+
+- popular: 
+  After you set the tag and search conditions, pass the URL of the first page into cmd, it will automatically download all the pictures that meet the conditions, and record the picture id. Duplicate pictures will not be crawled.
+  This mode needs cookies with pixiv vip.
+
+- ranking_tag:
+  Crawl all the pictures that satisfy the tag on the ranking of the day, you can change the tag in RankingTagSpider.require_tags, type list.
+
+- tag_like:
+  Search all pictures of a specific tag, filter and download the pictures. You can set the upper and lower limits of *bookmark* or *like* or*view*, alse you can set start and end page.
+
+  This mode needs cookies 'cause visitor can only search first ten pages each tag.
 
 ## proxy
 
