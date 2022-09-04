@@ -120,6 +120,11 @@ class PopularSpider(scrapy.Spider):
         assert error != "false", f"Error occurred during spider on {response.url}"
         body = resp_json.get("body")
         illust = body.get("illust")
+
+        # 如果默认用的顶部，搜索出的可能是 illust或者illustManga
+        if not illust:
+            illust = body.get("illustManga")
+
         data = illust.get("data")
 
         if data:
